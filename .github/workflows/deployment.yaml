@@ -3,9 +3,7 @@ on:
   push:
     branches:
       - develop
-
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest

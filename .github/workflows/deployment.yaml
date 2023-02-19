@@ -13,4 +13,10 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: |
+          cd projects
+          git clone https://github.com/GrowingDev/growing-solution.git
+          cd growing-solution
+          docker compose stop
+          docker compose build --no-cache
+          docker compose up -d --force-recreate

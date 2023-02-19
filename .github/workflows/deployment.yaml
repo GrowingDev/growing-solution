@@ -20,6 +20,4 @@ jobs:
           docker compose stop
           docker compose build --no-cache
           docker images
-          docker compose up -d --force-recreate --build
-
-# go to directory where you want to pull the repository 
+          docker compose up -d

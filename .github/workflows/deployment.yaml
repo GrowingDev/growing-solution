@@ -14,6 +14,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /etc
-          ls
+          git clone https://github.com/GrowingDev/growing-solution.git
 # go to directory where you want to pull the repository 

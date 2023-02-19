@@ -3,6 +3,8 @@ services:
   web:
     build: ./webclient
     ports:
-      - "8080:8080"
+      - 8080:80
+    expose:
+      - 80
     #api:
     #db:

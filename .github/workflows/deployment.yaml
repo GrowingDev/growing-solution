@@ -15,6 +15,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd projects
+          rm -r growing-solution
           git clone https://github.com/GrowingDev/growing-solution.git
           cd growing-solution/webclient
           docker compose stop

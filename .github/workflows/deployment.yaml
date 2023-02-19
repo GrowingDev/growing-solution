@@ -18,7 +18,7 @@ jobs:
           git clone https://github.com/GrowingDev/growing-solution.git
           cd growing-solution/webclient
           docker compose stop
-          docker compose build --no-cache
+          docker compose build --no-cache --pull
           docker images
           docker compose up -d
 

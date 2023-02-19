@@ -3,9 +3,7 @@ services:
   web:
     build: ./webclient
     ports:
-      - "80:80"
+      - "8081:8081"
     tty: true
-    expose:
-      - "80" 
     #api:
     #db:

@@ -4,7 +4,7 @@
 FROM node:latest as build
 
 # Set the working directory
-WORKDIR /usr/local/projects/growing-solution/webclient
+WORKDIR /usr/local/app
 
 # Add the source code to app
 COPY ./ /usr/local/app/
@@ -22,7 +22,7 @@ RUN npm run build
 FROM nginx:latest
 
 # Copy the build output to replace the default nginx contents.
-COPY --from=build /usr/local/projects/growing-solution/webclient/dist/growing-solution /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/growing-solution /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80

@@ -14,5 +14,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
+          mkdir projects
+          cd projects
           git clone https://github.com/GrowingDev/growing-solution.git
 # go to directory where you want to pull the repository 

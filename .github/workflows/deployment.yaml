@@ -19,5 +19,4 @@ jobs:
           cd growing-solution/webclient
           docker compose stop
           docker compose build --no-cache
-          docker images
           docker compose up -d

@@ -13,4 +13,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: ls
+        script: 
+          cd /etc
+          ls
+# go to directory where you want to pull the repository 

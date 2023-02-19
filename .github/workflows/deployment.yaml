@@ -17,4 +17,9 @@ jobs:
           mkdir projects
           cd projects
           git clone https://github.com/GrowingDev/growing-solution.git
+          cd growing-solution/webclient
+          docker build -t growingdev/growing-solution-webclient-image:latest  .
+          docker image ls
+          docker run -d -p 8080:80 growingdev/growing-solution-webclient-image:latest 
+
 # go to directory where you want to pull the repository 

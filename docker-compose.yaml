@@ -4,6 +4,5 @@ services:
     build: ./webclient
     ports:
       - 80:80
-    tty: true
     #api:
     #db:

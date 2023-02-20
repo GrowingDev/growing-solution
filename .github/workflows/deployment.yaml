@@ -21,6 +21,5 @@ jobs:
           cd projects
           git clone https://github.com/GrowingDev/growing-solution.git
           cd growing-solution
-          docker compose stop
           docker compose build --no-cache
           docker compose up -d --force-recreate

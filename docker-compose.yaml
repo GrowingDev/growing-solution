@@ -1,10 +1,11 @@
 version: '3.8'
 services:
   web:
-    build: ./webclient
-    ports:
-    - "8080:80"
+    image: nginx
     volumes:
-    - ./src:/usr/share/nginx/html
-    #api:
-    #db:
+      - ./templates:/etc/nginx/templates
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_HOST=andreasbenz.org
+      - NGINX_PORT=80

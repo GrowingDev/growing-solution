@@ -5,7 +5,6 @@ on:
       - develop
       - master
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -23,3 +22,4 @@ jobs:
           cd growing-solution
           docker compose build --no-cache
           docker compose up -d --force-recreate
+          docker ps

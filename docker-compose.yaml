@@ -8,4 +8,4 @@ services:
     ports:
         - 80:80
     volumes:
-      - ./src:/usr/share/nginx/html
+      - ./webclient/dist/growing-solution:/usr/share/nginx/html

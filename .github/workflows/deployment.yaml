@@ -17,6 +17,7 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd projects
+          rm -d growing-solution
           git clone https://github.com/GrowingDev/growing-solution.git
           cd growing-solution
           docker compose build --no-cache

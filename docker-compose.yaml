@@ -1,12 +1,11 @@
-version: '3'
+version: '3.8'
 services:
-  web:
-    image: nginx:latest
+  webclient:
+    container_name: webclient
+    build: ./webclient
+    environment:
+      NODE_ENV: production
     ports:
-      - "8080:80"
+        - 80:80
     volumes:
       - ./src:/usr/share/nginx/html
-    links:
-      - php
-  php:
-    image: php:7-fpm

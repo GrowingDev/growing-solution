@@ -5,10 +5,6 @@ FROM node:latest as build
 
 # Set the working directory
 WORKDIR /usr/local/app
-
-# Add the source code to app
-COPY ./ /usr/local/app/
-
 # Install all the dependencies
 RUN npm install
 
@@ -20,7 +16,9 @@ RUN npm run build
 # Use official nginx image as the base image
 FROM nginx:latest
 
-# Copy the build output to replace the default nginx contents.
-COPY --from=build /usr/local/app/dist/growing-solution /usr/share/nginx/html
+# Remove default Nginx website
+RUN rm -rf /usr/share/nginx/html/*
 
-EXPOSE 80
+# Copy the build output to replace the default nginx contents.
+COPY --from=build /dist/growing-solution /usr/share/nginx/html
+# Start Nginx server

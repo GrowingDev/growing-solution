@@ -7,5 +7,3 @@ services:
       NODE_ENV: production
     ports:
         - 80:80
-    volumes:
-      - ./webclient/dist/growing-solution:/usr/share/nginx/html
